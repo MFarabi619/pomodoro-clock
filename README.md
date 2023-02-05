@@ -5,8 +5,10 @@ A [Pomodoro(Interval)](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer t
 - Utilize [glassmorphism](https://hype4.academy/tools/glassmorphism-generator).
 - The timer must have a modifiable focus interval and rest interval.
 - The background should be a smooth, aesthetic gradient.
+- The app must be fully-responsive down to 320 px of viewport width.
 
 ## Project Architecture:
+- Use Figma to wireframe the design.
 - Use React with vanilla JS.
 - Use Vite to create the app boilerplate.
 - Deploy on Vercel. 
