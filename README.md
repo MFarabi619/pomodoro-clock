@@ -18,4 +18,5 @@ A [Pomodoro(Interval)](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer t
 - Container div for clock screen.
 
 ## Learning Log:
-- 
+- Glassmorphism patterns and fundamentals.
+- Using near-black instead of black and near-white instead of white.
