@@ -13,5 +13,9 @@ A [Pomodoro(Interval)](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer t
 - Use Vite to create the app boilerplate.
 - Deploy on Vercel. 
 
+## HTML structure:
+- Wrapper div for the clock as a whole for easy re-sizing.
+- Container div for clock screen.
+
 ## Learning Log:
 - 
