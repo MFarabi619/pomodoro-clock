@@ -11,4 +11,8 @@ img {
 
 :root {
   background: linear-gradient(90deg, #feac5e, #c779d0, #4bc0c8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }

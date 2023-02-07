@@ -13,7 +13,6 @@ img {
   justify-content: center;
   align-items: center;
   border: 2px red solid;
-  margin: auto auto;
   width: 280px;
   height: 280px;
   background: linear-gradient(
@@ -23,7 +22,6 @@ img {
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(21px);
-  /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 1000px;
 }
