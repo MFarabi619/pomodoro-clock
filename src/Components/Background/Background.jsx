@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Background.scss";
 
 function Background() {
-  return <div className="background">Some text</div>;
+  return <div className="background"></div>;
 }
 
 export default Background;

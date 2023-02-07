@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  border: 2px red solid;
+  translate: 0 45vh;
+}
