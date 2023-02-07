@@ -9,8 +9,8 @@ img {
   max-width: 100%;
 }
 
-.background {
-  height: 100vh;
-  width: 100vw;
-  // background-color: red;
+:root {
+  // height: 100vh;
+  // width: 100vw;
+  background: linear-gradient(90deg, #feac5e, #c779d0, #4bc0c8);
 }
