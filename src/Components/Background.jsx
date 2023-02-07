@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Background.css";
 
-function App() {
-  return <div className="App">Some text</div>;
+function Background() {
+  return <div className="Background">Some text</div>;
 }
 
-export default App;
+export default Background;
