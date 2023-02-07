@@ -12,9 +12,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px red solid;
-  width: 280px;
-  height: 280px;
+  min-width: 280px;
+  min-height: 280px;
   background: linear-gradient(
     152.97deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -22,6 +21,6 @@ img {
     rgba(255, 255, 255, 0) 100%
   );
   backdrop-filter: blur(21px);
-
   border-radius: 1000px;
+  box-shadow: 10px 10px 20px 20px rgba(54, 54, 54, 0.116);
 }
