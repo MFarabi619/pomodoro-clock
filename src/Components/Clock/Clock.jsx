@@ -11,16 +11,24 @@ function Clock() {
       <div className="container-2">
         <section className="break-container">
           <p id="break-label">Break Length</p>
-          <span id="break-increment"></span>
+          <span id="break-decrement">
+            <FaArrowDown />
+          </span>
           <span id="break-length"></span>
-          <span id="break-decrement"></span>
+          <span id="break-increment">
+            <FaArrowUp />
+          </span>
         </section>
 
         <section className="session-container">
           <p id="session-label">Session Length</p>
-          <span id="session-increment"></span>
+          <span id="session-decrement">
+            <FaArrowDown />
+          </span>
           <span id="session-length"></span>
-          <span id="session-decrement"></span>
+          <span id="session-increment">
+            <FaArrowUp />
+          </span>
         </section>
       </div>
     </div>
