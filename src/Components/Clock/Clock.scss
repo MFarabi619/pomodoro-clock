@@ -23,7 +23,8 @@ img {
   font-size: 5vmin;
 }
 .time {
-  // font-size: 4rem;
+  position: relative;
+  bottom: 10px;
   font-size: 23vmin;
   font-weight: 800;
   letter-spacing: 0.065rem;
@@ -33,6 +34,6 @@ img {
   display: flex;
   justify-content: space-between;
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
   font-size: 3vmin;
 }
