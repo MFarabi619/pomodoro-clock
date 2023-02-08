@@ -9,12 +9,9 @@ img {
 }
 
 .circle {
-  //   border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 280px;
-  min-height: 280px;
   width: 80vmin;
   height: 80vmin;
   background: linear-gradient(

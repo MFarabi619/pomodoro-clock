@@ -29,13 +29,13 @@ function Clock() {
         </section>
 
         <section className="btn-container">
-          <span className="btn">
+          <span id="start_stop" className="btn">
             <FaPlay />
           </span>
           <span className="btn">
             <FaPause />
           </span>
-          <span className="btn">
+          <span id="reset" className="btn">
             <FaRedo />
           </span>
         </section>
