@@ -11,8 +11,8 @@ import {
 function Clock() {
   return (
     <div className="container-1">
-      <p className="timer-label">Time Remaining:</p>
-      <p className="time">15:46</p>
+      <p id="timer-label">Time Remaining:</p>
+      <p id="time-left">15:46</p>
 
       <div className="container-2">
         <section className="break-container">
