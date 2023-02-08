@@ -1,5 +1,6 @@
 import React from "react";
 import "./Clock.scss";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 function Clock() {
   return (
@@ -11,6 +12,7 @@ function Clock() {
         <section className="break-container">
           <p id="break-label">Break Length</p>
           <span id="break-increment"></span>
+          <span id="break-length"></span>
           <span id="break-decrement"></span>
         </section>
 
