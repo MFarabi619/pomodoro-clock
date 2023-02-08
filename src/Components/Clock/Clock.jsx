@@ -22,6 +22,12 @@ function Clock() {
           </div>
         </section>
 
+        <section className="btn-container">
+          <span></span>
+          <span></span>
+          <span></span>
+        </section>
+
         <section className="session-container">
           <p id="session-label">Session Length</p>
           <div className="container-3">
