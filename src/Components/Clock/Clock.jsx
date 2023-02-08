@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "./Clock.scss";
 import {
   FaArrowUp,
@@ -9,9 +10,11 @@ import {
 } from "react-icons/fa";
 
 function Clock() {
+  const [timer, setTimer] = useState(0);
+
   return (
     <div className="container-1">
-      <p id="timer-label">Time Remaining:</p>
+      <p id="timer-label">Time Remaining: {timer}</p>
       <p id="time-left">25:00</p>
 
       <div className="container-2">
@@ -29,7 +32,11 @@ function Clock() {
         </section>
 
         <section className="btn-container">
-          <span id="start_stop" className="btn">
+          <span
+            id="start_stop"
+            className="btn"
+            onClick={() => setTimer(timer + 1)}
+          >
             <FaPlay />
           </span>
           <span className="btn">
