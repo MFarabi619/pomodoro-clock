@@ -1,6 +1,12 @@
 import React from "react";
 import "./Clock.scss";
-import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+import {
+  FaArrowUp,
+  FaArrowDown,
+  FaPlay,
+  FaPause,
+  FaRedo,
+} from "react-icons/fa";
 
 function Clock() {
   return (
@@ -23,9 +29,15 @@ function Clock() {
         </section>
 
         <section className="btn-container">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="btn">
+            <FaPlay />
+          </span>
+          <span className="btn">
+            <FaPause />
+          </span>
+          <span className="btn">
+            <FaRedo />
+          </span>
         </section>
 
         <section className="session-container">
