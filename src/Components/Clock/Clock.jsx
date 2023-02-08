@@ -17,6 +17,7 @@ function Clock() {
         <section className="session-container">
           <p id="session-label">Session Length</p>
           <span id="session-increment"></span>
+          span#
           <span id="session-decrement"></span>
         </section>
       </div>
