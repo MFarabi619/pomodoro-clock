@@ -12,7 +12,7 @@ function Clock() {
   return (
     <div className="container-1">
       <p id="timer-label">Time Remaining:</p>
-      <p id="time-left">15:46</p>
+      <p id="time-left">25:00</p>
 
       <div className="container-2">
         <section className="break-container">
