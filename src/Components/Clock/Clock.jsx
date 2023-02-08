@@ -11,7 +11,7 @@ import {
 function Clock() {
   return (
     <div className="container-1">
-      <p className="time-remaining">Time Remaining:</p>
+      <p className="timer-label">Time Remaining:</p>
       <p className="time">15:46</p>
 
       <div className="container-2">
