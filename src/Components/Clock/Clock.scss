@@ -47,3 +47,13 @@ img {
 .btn {
   cursor: pointer;
 }
+
+.btn-container {
+  //   border: 2px solid red;
+  align-self: center;
+  justify-content: space-between;
+  span {
+    margin: 0 0.15em;
+  }
+  font-size: 5vmin;
+}
