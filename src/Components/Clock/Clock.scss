@@ -16,7 +16,7 @@ img {
 
 .container-1 {
   color: $light-theme-text;
-  border: 2px solid red;
+  //   border: 2px solid red;
 }
 
 .time-remaining {
@@ -36,4 +36,10 @@ img {
   position: relative;
   bottom: 15px;
   font-size: 3vmin;
+}
+
+.container-3 {
+  margin-top: 0.2em;
+  display: flex;
+  justify-content: space-between;
 }
