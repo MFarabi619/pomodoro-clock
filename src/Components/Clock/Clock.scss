@@ -47,16 +47,17 @@ img {
 
 .btn {
   cursor: pointer;
-  //   &:hover {
-  //     scale: 2;
-  //   }
+  &:hover {
+    scale: 1.1;
+    // color: rgba(255, 0, 0, 0.158);
+  }
+  &:active {
+    // color: rgba(255, 255, 0, 0.349);
+    translate: 0px 2px;
+  }
 }
-// #session-decrement {
-//   &:hover {
-//     scale: 2;
-//   }
-// }
 .btn-container {
+  display: flex;
   align-self: center;
   justify-content: space-between;
   span {
@@ -66,16 +67,4 @@ img {
 }
 
 .start_stop {
-  color: red;
-
-  &:hover {
-    scale: 2;
-  }
-  &:active {
-    top: 10px;
-  }
 }
-
-// .start_stop:hover {
-//   scale: 2;
-// }

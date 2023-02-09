@@ -39,6 +39,7 @@ function Clock() {
           >
             <FaPlay />
           </span>
+
           <span className="btn">
             <FaPause />
           </span>
