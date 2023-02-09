@@ -34,7 +34,7 @@ function Clock() {
         <section className="btn-container">
           <span
             id="start_stop"
-            className="btn"
+            className="btn start_stop"
             onClick={() => setTimer(timer + 1)}
           >
             <FaPlay />

@@ -47,13 +47,35 @@ img {
 
 .btn {
   cursor: pointer;
+  //   &:hover {
+  //     scale: 2;
+  //   }
 }
-
+// #session-decrement {
+//   &:hover {
+//     scale: 2;
+//   }
+// }
 .btn-container {
   align-self: center;
   justify-content: space-between;
   span {
     margin: 0 0.15em;
   }
-  font-size: 5vmin;
+  // font-size: 5vmin;
 }
+
+.start_stop {
+  color: red;
+
+  &:hover {
+    scale: 2;
+  }
+  &:active {
+    top: 10px;
+  }
+}
+
+// .start_stop:hover {
+//   scale: 2;
+// }
