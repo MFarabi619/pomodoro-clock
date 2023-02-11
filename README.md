@@ -19,4 +19,5 @@ A [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer that can be
 
 ## Learning Log:
 - Glassmorphism patterns and fundamentals.
-- Using near-black instead of black and near-white instead of white.
+- Using near-black instead of black and near-white instead of white for a better UI experience.
+- 'Scale' is a flexbox property.🤦‍♂️
