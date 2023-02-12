@@ -10,8 +10,8 @@ import {
 } from "react-icons/fa";
 
 function Clock() {
-  let [timer, setTimer] = useState(0);
-  let [breakNum, setBreakNum] = useState(5);
+  const [timer, setTimer] = useState(0);
+  const [breakNum, setBreakNum] = useState(5);
 
   return (
     <div className="container-1">
@@ -25,7 +25,7 @@ function Clock() {
             <span
               className="btn"
               id="break-decrement"
-              onClick={() => setBreakNum(breakNum - 1)}
+              onClick={() => setBreakNum(Math.max(breakNum - 1, 0))}
             >
               <FaArrowDown />
             </span>
