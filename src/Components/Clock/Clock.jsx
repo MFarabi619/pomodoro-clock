@@ -12,6 +12,7 @@ import {
 function Clock() {
   const [timer, setTimer] = useState(0);
   const [breakNum, setBreakNum] = useState(5);
+  const [sessionNum, setSessionNum] = useState(25);
 
   return (
     <div className="container-1">
@@ -60,11 +61,19 @@ function Clock() {
         <section className="session-container">
           <p id="session-label">Session Length</p>
           <div className="container-3">
-            <span className="btn" id="session-decrement">
+            <span
+              className="btn"
+              id="session-decrement"
+              onClick={() => setSessionNum(Math.max(sessionNum - 1, 0))}
+            >
               <FaArrowDown />
             </span>
-            <span id="session-length"> 25 </span>
-            <span className="btn" id="session-increment">
+            <span id="session-length"> {sessionNum} </span>
+            <span
+              className="btn"
+              id="session-increment"
+              onClick={() => setSessionNum(sessionNum + 1)}
+            >
               <FaArrowUp />
             </span>
           </div>
