@@ -13,11 +13,35 @@ function Clock() {
   const [timer, setTimer] = useState(25*60);
   const [breakNum, setBreakNum] = useState(5);
   const [sessionNum, setSessionNum] = useState(25);
+  const running = false;
 
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
     return (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+  }
+
+  const handleClick = (string) => { 
+    if (!running) { 
+      if (string === "session-increment") {
+        setSessionNum(sessionNum + 1);
+        setTimer((sessionNum + 1) * 60);
+      } else if (string === "session-decrement") {
+        setSessionNum(Math.max(sessionNum - 1, 0));
+        setTimer(Math.max((sessionNum - 1) * 60, 0));
+      }
+      else if (string === "start_stop") {
+        console.log("start_stop");
+      }
+      else if (string === "pause") {
+        console.log("pause");
+      }
+      else if(string==="reset"){
+        setSessionNum(25);
+        setBreakNum(5);
+        setTimer(25*60);
+      }
+    }
   }
 
   return (
@@ -51,15 +75,20 @@ function Clock() {
           <span
             id="start_stop"
             className="btn start_stop"
-            onClick={() => setTimer(timer + 1)}
+            onClick={() =>
+              handleClick("start_stop")}
           >
             <FaPlay />
           </span>
 
-          <span className="btn">
+          <span className="btn"
+          onClick={()=>handleClick("pause")}>
             <FaPause />
           </span>
-          <span id="reset" className="btn">
+          <span id="reset"
+            className="btn"
+            onClick={() =>
+          handleClick("reset")}>
             <FaRedo />
           </span>
         </section>
@@ -70,7 +99,9 @@ function Clock() {
             <span
               className="btn"
               id="session-decrement"
-              onClick={() => setSessionNum(Math.max(sessionNum - 1, 0))}
+              onClick={() =>
+                handleClick("session-decrement")
+                }
             >
               <FaArrowDown />
             </span>
@@ -78,7 +109,8 @@ function Clock() {
             <span
               className="btn"
               id="session-increment"
-              onClick={() => setSessionNum(sessionNum + 1)}
+              onClick={() =>
+                handleClick("session-increment")}
             >
               <FaArrowUp />
             </span>
