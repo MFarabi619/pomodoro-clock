@@ -39,7 +39,9 @@ img {
   font-size: 3vmin;
 }
 
+
 .container-3 {
+  user-select: none;
   margin-top: 0.2em;
   display: flex;
   justify-content: space-between;
