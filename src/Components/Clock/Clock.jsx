@@ -10,14 +10,20 @@ import {
 } from "react-icons/fa";
 
 function Clock() {
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState(25*60);
   const [breakNum, setBreakNum] = useState(5);
   const [sessionNum, setSessionNum] = useState(25);
 
+  const formatTime = (time) => {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    return (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+  }
+
   return (
     <div className="container-1">
-      <p id="timer-label">Time Remaining: {timer}</p>
-      <p id="time-left">25:00</p>
+      <p id="timer-label">Time Remaining:</p>
+      <p id="time-left">{formatTime(timer)}</p>
 
       <div className="container-2">
         <section className="break-container">
