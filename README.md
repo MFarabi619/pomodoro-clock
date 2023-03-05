@@ -23,3 +23,4 @@ A [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer that can be
 - 'Scale' is a flexbox property.🤦‍♂️
 - Using vmin instead of vw or vh.
 - Prevented break and session length values from dropping below 0 using 'Math.max'
+- Using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
