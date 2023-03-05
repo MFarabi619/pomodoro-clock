@@ -15,7 +15,7 @@ function Clock() {
   const [sessionNum, setSessionNum] = useState(25);
   const [onBreak, setOnBreak] = useState(false);
 
-  let running = false;
+  let running = true;
 
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
@@ -32,13 +32,17 @@ function Clock() {
         setSessionNum(Math.max(sessionNum - 1, 0));
         setTimer(Math.max((sessionNum - 1) * 60, 0));
       }
+      if (string === "start_stop") {
+        console.log("start "+running);
+          running = true;
+        controlTime();
+        console.log(running);
+      }
     }
-    if (string === "start_stop") {
-      controlTime();
-      console.log("start_stop " + running);
-    }
-    else if (string === "pause") {
+
+    if (string === "pause") {
       running = false;
+      controlTime();
       console.log("pause "+running);
     }
     else if(string==="reset"){
@@ -53,7 +57,7 @@ function Clock() {
     let date = new Date().getTime();
     let nextDate = new Date().getTime() + second;
     let onBreakVariable = onBreak;
-    if (!running) {
+    if (running) {
       let interval = setInterval(() => {
         date = new Date().getTime();
         if (date > nextDate) {
@@ -69,7 +73,6 @@ function Clock() {
     else {
       clearInterval(localStorage.getItem('interval-id'));
     }
-    running = !running;
   }
 
   return (
