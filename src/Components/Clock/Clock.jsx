@@ -80,7 +80,9 @@ function Clock() {
 
       <div className="container-2">
         <section className="break-container">
-          <p id="break-label">Break Length</p>
+          <p id="break-label"
+            style={{ userSelect: "none" }}
+          >Break Length</p>
           <div className="container-3">
             <span
               className="btn"
