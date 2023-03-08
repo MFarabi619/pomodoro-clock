@@ -14,8 +14,7 @@ function Clock() {
   const [breakNum, setBreakNum] = useState(5);
   const [sessionNum, setSessionNum] = useState(25);
   const [onBreak, setOnBreak] = useState(false);
-
-  let running = false;
+  let [running, setRunning] = useState(false);
 
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
@@ -25,35 +24,32 @@ function Clock() {
 
   const handleClick = (string) => { 
     if (!running) { 
-      if (string === "session-increment") {
+      if (string === "start_stop") {
+        setRunning(running=true);
+        controlTime();
+      }
+      else if (string === "session-increment") {
         setSessionNum(sessionNum + 1);
         setTimer((sessionNum + 1) * 60);
       } else if (string === "session-decrement") {
         setSessionNum(Math.max(sessionNum - 1, 0));
         setTimer(Math.max((sessionNum - 1) * 60, 0));
       }
-      if (string === "start_stop") {
-        console.log("start "+running);
-          running = true;
-        controlTime();
-      }
     }
 
     if (string === "pause") {
-      running = false;
-      console.log("pause "+running);
+      setRunning(running = false);
       controlTime();
     }
     else if(string==="reset"){
-      running = false;
+      setRunning(running = false);
       setSessionNum(25);
       setBreakNum(5);
       setTimer(25 * 60);
       controlTime();
     } 
-    console.log("running "+running);
   }
-
+  
   const controlTime = () => {
     let second = 1000;
     let date = new Date().getTime();
@@ -75,7 +71,7 @@ function Clock() {
     else {
       clearInterval(localStorage.getItem('interval-id'));
     }
-  }
+  };
 
   return (
     <div className="container-1">
@@ -108,8 +104,9 @@ function Clock() {
           <span
             id="start_stop"
             className="btn start_stop"
-            onClick={() =>
-              handleClick("start_stop")}
+            onClick={() => {
+              handleClick("start_stop")
+            }}
           >
             <FaPlay />
           </span>
