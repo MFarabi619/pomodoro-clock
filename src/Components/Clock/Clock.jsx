@@ -124,7 +124,10 @@ function Clock() {
         </section>
 
         <section className="session-container">
-          <p id="session-label">Session Length</p>
+          <p id="session-label"
+            style={{ userSelect: "none" }}
+          
+          >Session Length</p>
           <div className="container-3">
             <span
               className="btn"
