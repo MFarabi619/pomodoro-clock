@@ -24,3 +24,4 @@ A [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer that can be
 - Using vmin instead of vw or vh.
 - Prevented break and session length values from dropping below 0 using 'Math.max'
 - Using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- Inline CSS in React does not include the dash. So background-color would be backgroundColor. [Styling React Using CSS](https://www.w3schools.com/react/react_css.asp)
