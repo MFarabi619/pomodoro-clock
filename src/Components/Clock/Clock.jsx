@@ -15,7 +15,7 @@ function Clock() {
   const [sessionNum, setSessionNum] = useState(25);
   const [onBreak, setOnBreak] = useState(false);
 
-  let running = true;
+  let running = false;
 
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
@@ -36,20 +36,22 @@ function Clock() {
         console.log("start "+running);
           running = true;
         controlTime();
-        console.log(running);
       }
     }
 
     if (string === "pause") {
       running = false;
-      controlTime();
       console.log("pause "+running);
+      controlTime();
     }
     else if(string==="reset"){
+      running = false;
       setSessionNum(25);
       setBreakNum(5);
-      setTimer(25*60);
+      setTimer(25 * 60);
+      controlTime();
     } 
+    console.log("running "+running);
   }
 
   const controlTime = () => {
