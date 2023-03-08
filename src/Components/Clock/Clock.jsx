@@ -10,11 +10,12 @@ import {
 } from "react-icons/fa";
 
 function Clock() {
-  const [timer, setTimer] = useState(25*60);
-  const [breakNum, setBreakNum] = useState(5);
-  const [sessionNum, setSessionNum] = useState(25);
-  const [onBreak, setOnBreak] = useState(false);
+  const [timer, setTimer] = useState(4);
+  const [breakNum, setBreakNum] = useState(3);
+  const [sessionNum, setSessionNum] = useState(5);
+  let [onBreak, setOnBreak] = useState(false);
   let [running, setRunning] = useState(false);
+  const [breakAudio, setBreakAudio] = useState(new Audio('/src/assets/Beep Sound Effect.mp3'));
 
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
@@ -60,6 +61,18 @@ function Clock() {
         date = new Date().getTime();
         if (date > nextDate) {
           setTimer((prev) => {
+            if (prev <= 0 && !onBreakVariable) {
+              playBreakSound();
+              onBreakVariable = true;
+              setOnBreak(onBreak=true);
+              return breakNum;
+            }
+            else if (prev <= 0 && onBreakVariable) { 
+              playBreakSound();
+              onBreakVariable = false;
+              setOnBreak(onBreak=false);
+              return sessionNum;
+            }
             return prev - 1;
           });
           nextDate += second;
@@ -73,9 +86,15 @@ function Clock() {
     }
   };
 
+
+  const playBreakSound = () => { 
+    breakAudio.currentTime = 0; 
+    breakAudio.play();
+  }
+
   return (
     <div className="container-1">
-      <p id="timer-label">Time Remaining:</p>
+      <p id="timer-label">{onBreak?"Break":"Time"} remaining:</p>
       <p id="time-left">{formatTime(timer)}</p>
 
       <div className="container-2">
