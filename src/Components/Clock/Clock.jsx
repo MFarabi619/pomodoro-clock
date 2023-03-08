@@ -91,7 +91,10 @@ function Clock() {
             >
               <FaArrowDown />
             </span>
-            <span id="break-length"> {breakNum} </span>
+            <span id="break-length"
+            
+            style={{ userSelect: "none" }}
+            > {breakNum} </span>
             <span
               className="btn"
               id="break-increment"
@@ -140,7 +143,10 @@ function Clock() {
             >
               <FaArrowDown />
             </span>
-            <span id="session-length"> {sessionNum} </span>
+            <span id="session-length"
+            
+            style={{ userSelect: "none" }}
+            > {sessionNum} </span>
             <span
               className="btn"
               id="session-increment"
