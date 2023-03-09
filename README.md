@@ -32,3 +32,4 @@ A [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer that can be
 
 ## Future Improvements:
 - Use the approach linked in [context](https://javascript.plainenglish.io/create-a-pomodoro-timer-with-react-and-javascript-dead941b1fec) instead to run the timer as it is far simpler. The current approach is meant for earlier versions of React. 
+- Combine the play and pause buttons. 
