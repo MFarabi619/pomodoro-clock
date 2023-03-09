@@ -25,3 +25,10 @@ A [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer that can be
 - Prevented break and session length values from dropping below 0 using 'Math.max'
 - Using [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 - Inline CSS in React does not include the dash. So background-color would be backgroundColor. [Styling React Using CSS](https://www.w3schools.com/react/react_css.asp)
+- Playing audio files using the '.play()' function.
+- Utilizing useEffect hook in this [context](https://javascript.plainenglish.io/create-a-pomodoro-timer-with-react-and-javascript-dead941b1fec) to get change timer from session to break. 
+- Utlizing the [setTimeout](https://upmostly.com/tutorials/settimeout-in-react-components-using-hooks) function to delay an action.
+
+
+## Future Improvements:
+- Use the approach linked in [context](https://javascript.plainenglish.io/create-a-pomodoro-timer-with-react-and-javascript-dead941b1fec) instead to run the timer as it is far simpler. The current approach is meant for earlier versions of React. 
