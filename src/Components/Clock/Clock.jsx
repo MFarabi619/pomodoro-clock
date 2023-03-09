@@ -92,8 +92,10 @@ function Clock() {
   }
   
   useEffect(() => {
-    if (timer <= 0) {
-      setOnBreak(onBreak = !onBreak);
+    if (timer == 0) {
+    setTimeout(() => { 
+        setOnBreak(onBreak = !onBreak);
+      }, 1000);
     }
   }, [timer]);
   
