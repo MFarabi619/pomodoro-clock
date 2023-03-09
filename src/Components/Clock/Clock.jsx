@@ -65,7 +65,7 @@ function Clock() {
             if (prev <= 0) {
               if (!onBreak) {
                   playBreakSound();
-                  return breakNum;
+                  return breakNum*60;
               }
               else { 
                 playBreakSound();
