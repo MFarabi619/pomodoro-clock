@@ -17,17 +17,14 @@ function Clock() {
   let [running, setRunning] = useState(false);
   const [breakAudio, setBreakAudio] = useState(new Audio('/src/assets/Beep Sound Effect.mp3'));
 
-  useEffect(() => {
-    controlTime();
-  }, [onBreak]);
-
-
+  
+  
   const formatTime = (time) => {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
     return (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
   }
-
+  
   const handleClick = (string) => { 
     if (!running) { 
       if (string === "start_stop") {
@@ -60,38 +57,18 @@ function Clock() {
     let second = 1000;
     let date = new Date().getTime();
     let nextDate = new Date().getTime() + second;
-    let onBreakVariable = onBreak;
     if (running) {
       let interval = setInterval(() => {
         date = new Date().getTime();
         if (date > nextDate) {
           setTimer((prev) => {
             if (prev <= 0) {
-              // if (!onBreak) {
-              //   playBreakSound();
-              //   setOnBreak(onBreak=true);
-              //   console.log('Set to: ' + onBreak);
-              //   return breakNum;
-              // }
-              // else { 
-              //   playBreakSound();
-              //   setOnBreak(onBreak=false);
-              //   console.log('Set now to: ' + onBreak);
-              //   return sessionNum;
-              // }
-              if (prev <= 0 && !onBreakVariable) {
-                console.log('reached');
-                playBreakSound();
-                onBreakVariable = true;
-                setOnBreak(onBreak=true);
-                console.log('Final is ' + onBreakVariable);
-                return breakNum;
+              if (!onBreak) {
+                  playBreakSound();
+                  return breakNum;
               }
-              else if (prev <= 0 && onBreakVariable) {
-                console.log('reached 2');
+              else { 
                 playBreakSound();
-                onBreakVariable = false;
-                setOnBreak(onBreak=false);
                 return sessionNum;
               }
             }
@@ -108,12 +85,18 @@ function Clock() {
       clearInterval(localStorage.getItem('interval-id'));
     }
   };
-
-
+  
   const playBreakSound = () => { 
     breakAudio.currentTime = 0; 
     breakAudio.play();
   }
+  
+  useEffect(() => {
+    if (timer <= 0) {
+      setOnBreak(onBreak = !onBreak);
+    }
+  }, [timer]);
+  
 
   return (
     <div className="container-1">
