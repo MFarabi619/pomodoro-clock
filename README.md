@@ -1,5 +1,6 @@
 # pomodoro-clock
 A [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer that can be set to various intervals for deep, focused work and increased productivity.
+![Live Demo](https://github.com/MFarabi619/pomodoro-clock/blob/main/src/assets/Project%20image.png?raw=true)
 
 ## Project Goals and requirements:
 - Utilize [glassmorphism](https://hype4.academy/tools/glassmorphism-generator).
