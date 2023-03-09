@@ -10,9 +10,9 @@ import {
 } from "react-icons/fa";
 
 function Clock() {
-  const [timer, setTimer] = useState(3);
-  const [breakNum, setBreakNum] = useState(2);
-  const [sessionNum, setSessionNum] = useState(3);
+  const [timer, setTimer] = useState(25*60);
+  const [breakNum, setBreakNum] = useState(5);
+  const [sessionNum, setSessionNum] = useState(25);
   let [onBreak, setOnBreak] = useState(false);
   let [running, setRunning] = useState(false);
   const [breakAudio, setBreakAudio] = useState(new Audio('/src/assets/Beep Sound Effect.mp3'));
