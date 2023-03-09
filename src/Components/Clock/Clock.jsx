@@ -102,9 +102,7 @@ function Clock() {
 
   return (
     <div className="container-1">
-      <p id="timer-label"
-      style={{ userSelect: "none" }}
-      >{onBreak ? "Break" : "Time"} remaining:</p>
+      <p id="timer-label">{onBreak?"Break":"Time"} remaining:</p>
       <p id="time-left"
       style={{ userSelect: "none" }}
       >{formatTime(timer)}</p>
