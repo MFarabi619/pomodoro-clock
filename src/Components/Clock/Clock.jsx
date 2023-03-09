@@ -28,7 +28,7 @@ function Clock() {
   const handleClick = (string) => { 
     if (!running) { 
       if (string === "start_stop") {
-        setRunning(running=true);
+        setRunning(running = true);
         controlTime();
       }
       else if (string === "session-increment") {
@@ -36,7 +36,13 @@ function Clock() {
         setTimer((sessionNum + 1) * 60);
       } else if (string === "session-decrement") {
         setSessionNum(Math.max(sessionNum - 1, 1));
-        setTimer(Math.max((sessionNum - 1) * 60, 1*60));
+        setTimer(Math.max((sessionNum - 1) * 60, 1 * 60));
+      }
+      else if (string === "break-increment") { 
+setBreakNum(breakNum + 1)
+      }
+      else if (string === "break-decrement") { 
+        setBreakNum(Math.max(breakNum - 1, 1));
       }
     }
 
@@ -118,7 +124,7 @@ function Clock() {
             <span
               className="btn"
               id="break-decrement"
-              onClick={() => setBreakNum(Math.max(breakNum - 1, 1))}
+              onClick={() => {handleClick("break-decrement");}}
             >
               <FaArrowDown />
             </span>
@@ -129,7 +135,8 @@ function Clock() {
             <span
               className="btn"
               id="break-increment"
-              onClick={() => setBreakNum(breakNum + 1)}
+              onClick={() => { handleClick("break-increment"); }
+                }
             >
               <FaArrowUp />
             </span>
