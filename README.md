@@ -3,7 +3,7 @@ An aesthetic [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer 
 
 [Live Demo](https://mfarabi-pomodoro-clock.vercel.app)
 
-![Live Demo](https://github.com/MFarabi619/pomodoro-clock/blob/main/src/assets/Project%20image.png?raw=true)
+![Image](https://github.com/MFarabi619/pomodoro-clock/blob/main/src/assets/Project%20image.png?raw=true)
 
 ## Project Goals and requirements:
 - Utilize [glassmorphism](https://hype4.academy/tools/glassmorphism-generator).
