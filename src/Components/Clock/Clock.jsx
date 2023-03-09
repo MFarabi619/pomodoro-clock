@@ -103,7 +103,9 @@ function Clock() {
   return (
     <div className="container-1">
       <p id="timer-label">{onBreak?"Break":"Time"} remaining:</p>
-      <p id="time-left">{formatTime(timer)}</p>
+      <p id="time-left"
+      style={{ userSelect: "none" }}
+      >{formatTime(timer)}</p>
 
       <div className="container-2">
         <section className="break-container">
