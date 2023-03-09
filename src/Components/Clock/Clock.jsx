@@ -35,8 +35,8 @@ function Clock() {
         setSessionNum(sessionNum + 1);
         setTimer((sessionNum + 1) * 60);
       } else if (string === "session-decrement") {
-        setSessionNum(Math.max(sessionNum - 1, 0));
-        setTimer(Math.max((sessionNum - 1) * 60, 0));
+        setSessionNum(Math.max(sessionNum - 1, 1));
+        setTimer(Math.max((sessionNum - 1) * 60, 1*60));
       }
     }
 
@@ -114,7 +114,7 @@ function Clock() {
             <span
               className="btn"
               id="break-decrement"
-              onClick={() => setBreakNum(Math.max(breakNum - 1, 0))}
+              onClick={() => setBreakNum(Math.max(breakNum - 1, 1))}
             >
               <FaArrowDown />
             </span>
